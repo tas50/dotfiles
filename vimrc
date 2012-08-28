@@ -20,3 +20,7 @@ syntax enable
 
 " Highlight search results
 set hlsearch
+
+" Load pathogen
+call pathogen#infect()
+call pathogen#helptags()
