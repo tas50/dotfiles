@@ -29,5 +29,5 @@ set hlsearch
 :set smartcase
 
 " Load pathogen
-call pathogen#infect()
-call pathogen#helptags()
+"call pathogen#infect()
+"call pathogen#helptags()
