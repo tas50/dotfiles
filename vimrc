@@ -21,6 +21,13 @@ syntax enable
 " Highlight search results
 set hlsearch
 
+" Use incremental searching (starts as soon as  you type)
+:set incsearch
+
+" Ignore case in search unless I specify an upper case
+:set ignorecase
+:set smartcase
+
 " Load pathogen
 call pathogen#infect()
 call pathogen#helptags()
