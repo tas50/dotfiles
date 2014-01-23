@@ -14,6 +14,16 @@ set smarttab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
+
+" enable a horizontal cursor on the line being edited
+set cursorline
+
+" visual autocomplete command menu
+set wildmenu 
+
+" highlight the second part of matchig pairs in parens and such
+set showmatch
 
 " Enable syntax highlighting
 syntax enable
