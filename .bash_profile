@@ -5,6 +5,7 @@ alias ll="ls -lah"
 # setup git
 git config --global user.name 'Tim Smith'
 git config --global user.email 'tim@cozy.co'
+git config --global push.default simple
 
 # chef aliases
 alias kef="knife environment from file"
