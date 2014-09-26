@@ -14,3 +14,6 @@ alias krf="knife role from file"
 # path aliases
 alias dev="cd ~/dev"
 alias cr="cd ~/dev/chef-repo"
+
+# sometimes you get something that has no installer
+PATH=$PATH:~/Applications/packer
