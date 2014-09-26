@@ -17,3 +17,4 @@ alias cr="cd ~/dev/chef-repo"
 
 # sometimes you get something that has no installer
 PATH=$PATH:~/Applications/packer
+alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
