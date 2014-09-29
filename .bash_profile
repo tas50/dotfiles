@@ -19,3 +19,7 @@ alias cb="cd ~/dev/chef-repo/cookbooks"
 # sometimes you get something that has no installer
 PATH=$PATH:~/Applications/packer
 alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# smaller prompt with more info since hostsnames are crazy long
+PS1="\[\e[00;31m\]MBP\[\e[0m\]\[\e[00;37m\]_\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
+
