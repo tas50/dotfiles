@@ -23,3 +23,10 @@ alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 # smaller prompt with more info since hostsnames are crazy long
 PS1="\[\e[00;31m\]MBP\[\e[0m\]\[\e[00;37m\]_\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
 
+# easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
