@@ -40,3 +40,6 @@ csr () {
       openssl req -out $1.csr -new -newkey rsa:2048 -nodes -keyout $1.private.key
     }
 
+
+# aws
+. ~/.aws/aws.sh
