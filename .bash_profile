@@ -43,3 +43,6 @@ csr () {
 
 # aws
 . ~/.aws/aws.sh
+
+Make sure the ChefDK paths are correctly setup
+eval "$(chef shell-init bash)"
