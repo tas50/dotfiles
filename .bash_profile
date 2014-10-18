@@ -11,6 +11,7 @@ git config --global push.default simple
 alias kef="knife environment from file"
 alias krf="knife role from file"
 export EDITOR=vim
+alias ec="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/chef-repo/"
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
@@ -44,5 +45,5 @@ csr () {
 # aws
 . ~/.aws/aws.sh
 
-Make sure the ChefDK paths are correctly setup
+# make sure the ChefDK paths are correctly setup
 eval "$(chef shell-init bash)"
