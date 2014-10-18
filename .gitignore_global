@@ -3,12 +3,12 @@
 
 # chef
 .vagrant
-/cookbooks
 
 # Bundler
 bin/*
 .bundle/*
 
+# test kitchen
 .kitchen/
 .kitchen.local.yml
 
