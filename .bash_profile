@@ -17,9 +17,10 @@ alias ec="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/
 alias dev="cd ~/dev; ls -C"
 alias cr="cd ~/dev/chef-repo; ls -C"
 alias cb="cd ~/dev/chef-repo/cookbooks; ls -C"
+alias dbag="cd ~/dev/chef-repo/data_bags; ls -C"
 
 # sometimes you get something that has no installer
-PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib
+PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib:~/Applications/ec2-api-tools/bin
 alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # smaller prompt with more info since hostsnames are crazy long
@@ -41,9 +42,10 @@ csr () {
       openssl req -out $1.csr -new -newkey rsa:2048 -nodes -keyout $1.private.key
     }
 
-
-# aws
+# aws creds
 . ~/.aws/aws.sh
 
-# make sure the ChefDK paths are correctly setup
-eval "$(chef shell-init bash)"
+# aws command line tools
+export EC2_HOME=~/Applications/ec2-api-tools  
+
+#eval "$(chef shell-init bash)"
