@@ -46,6 +46,7 @@ csr () {
 . ~/.aws/aws.sh
 
 # aws command line tools
-export EC2_HOME=~/Applications/ec2-api-tools  
+export EC2_HOME=~/Applications/ec2-api-tools
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 #eval "$(chef shell-init bash)"
