@@ -16,6 +16,7 @@ alias ec="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/
 # path aliases
 alias dev="cd ~/dev; ls -C"
 alias cr="cd ~/dev/chef-repo; ls -C"
+alias crb="cd ~/dev/chef-repo/bin; ls -C"
 alias cb="cd ~/dev/chef-repo/cookbooks; ls -C"
 alias dbag="cd ~/dev/chef-repo/data_bags; ls -C"
 
@@ -50,3 +51,11 @@ export EC2_HOME=~/Applications/ec2-api-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 #eval "$(chef shell-init bash)"
+
+edbagshow () {
+  knife data bag show $@ -Fj --secret-file /Users/tim/.chef/encrypted_data_bag_secret
+}
+
+dbagshow () {
+  knife data bag show $@ -Fj
+}
