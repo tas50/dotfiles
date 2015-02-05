@@ -50,7 +50,11 @@ csr () {
 export EC2_HOME=~/Applications/ec2-api-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-#eval "$(chef shell-init bash)"
+# setup chef dk in a way that doesn't break the world
+PATH=/opt/chefdk/bin:$PATH
+
+# add the various chef bin tools
+PATH=~/repos/chef-repo/bin:$PATH
 
 edbagshow () {
   knife data bag show $@ -Fj --secret-file /Users/tim/.chef/encrypted_data_bag_secret
