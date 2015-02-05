@@ -24,7 +24,8 @@
     "*.class",
     "*.psd",
     "*.db",
-    "*.pdf"
+    "*.pdf",
+    "*.gem"
   ],
   "folder_exclude_patterns":
   [
@@ -33,7 +34,8 @@
     "CVS",
     ".bundle",
     "bundle",
-    "tmp"
+    "tmp",
+    ".vagrant"
   ],
   "font_face": "Inconsolata-dz",
   "font_size": 14.0,
