@@ -10,8 +10,9 @@ git config --global push.default simple
 # chef stuff
 alias kef="knife environment from file"
 alias krf="knife role from file"
-export EDITOR=vim
 alias ec="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/chef-repo/"
+alias hosts="knife node list | sort"
+export EDITOR=vim
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
@@ -54,7 +55,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 PATH=/opt/chefdk/bin:$PATH
 
 # add the various chef bin tools
-PATH=~/repos/chef-repo/bin:$PATH
+PATH=~/dev/chef-repo/bin:$PATH
 
 edbagshow () {
   knife data bag show $@ -Fj --secret-file /Users/tim/.chef/encrypted_data_bag_secret
