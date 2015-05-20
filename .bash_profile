@@ -16,6 +16,7 @@ export EDITOR=vim
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
+alias cf="cd ~/dev/cozy; ls -C"
 alias cr="cd ~/dev/chef-repo; ls -C"
 alias crb="cd ~/dev/chef-repo/bin; ls -C"
 alias cb="cd ~/dev/chef-repo/cookbooks; ls -C"
@@ -64,3 +65,8 @@ edbagshow () {
 dbagshow () {
   knife data bag show $@ -Fj
 }
+
+export COZY_PROJECTS_DIR="$HOME/dev/cozy"
+export PATH="$COZY_PROJECTS_DIR/cozy-dotfiles:$PATH"
+source "$COZY_PROJECTS_DIR/cozy-dotfiles/util/shell_helpers.sh"
+source "$COZY_PROJECTS_DIR/cozy-dotfiles/util/bash_completion.sh"
