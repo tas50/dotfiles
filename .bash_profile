@@ -67,6 +67,27 @@ dbagshow () {
 }
 
 export COZY_PROJECTS_DIR="$HOME/dev/cozy"
-export PATH="$COZY_PROJECTS_DIR/cozy-dotfiles:$PATH"
-source "$COZY_PROJECTS_DIR/cozy-dotfiles/util/shell_helpers.sh"
-source "$COZY_PROJECTS_DIR/cozy-dotfiles/util/bash_completion.sh"
+
+# function to load or unload the service (start/stop)
+redis () {
+  launchctl $@ /usr/local/opt/redis/homebrew.mxcl.redis.plist 
+}
+
+function devmode {
+  printf "Using Gemfile.devel for development mode.\n"
+    export BUNDLE_GEMFILE=Gemfile.devel
+}
+
+function prodmode {
+  printf "Using Gemfile for production mode.\n"
+  unset BUNDLE_GEMFILE
+}
+
+# alias to open finder windows from CLI in an intelligent way
+function o () {
+  if [ -z $1 ]; then
+    open .
+  else
+    open $1
+  fi
+}
