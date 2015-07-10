@@ -1,4 +1,5 @@
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
@@ -20,7 +21,7 @@ set softtabstop=2
 set cursorline
 
 " visual autocomplete command menu
-set wildmenu 
+set wildmenu
 
 " highlight the second part of matchig pairs in parens and such
 set showmatch
