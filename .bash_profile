@@ -24,7 +24,6 @@ alias dbag="cd ~/dev/chef-repo/data_bags; ls -C"
 
 # sometimes you get something that has no installer
 PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib:~/Applications/ec2-api-tools/bin
-alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # smaller prompt with more info since hostsnames are crazy long
 PS1="\[\e[00;31m\]MBP\[\e[0m\]\[\e[00;37m\]_\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
@@ -89,5 +88,14 @@ function o () {
     open .
   else
     open $1
+  fi
+}
+
+# alias for opening sublime text. if nothing opened assume the dev dir
+function s () {
+  if [ -z $1 ]; then
+    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/
+  else
+    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $1
   fi
 }
