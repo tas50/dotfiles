@@ -1,51 +1,46 @@
 {
-  "bold_folder_labels": true,
-  "color_scheme": "Packages/User/Sunburst (SL).tmTheme",
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    ".DS_Store",
-    ".tags*",
-    "*.pyc",
-    "*.pyo",
-    "*.exe",
-    "*.dll",
-    "*.obj",
-    "*.o",
-    "*.a",
-    "*.lib",
-    "*.so",
-    "*.dylib",
-    "*.ncb",
-    "*.sdf",
-    "*.suo",
-    "*.pdb",
-    "*.idb",
-    "*.class",
-    "*.psd",
-    "*.db",
-    "*.pdf",
-    "*.gem"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".git",
-    ".svn",
-    "CVS",
-    ".bundle",
-    "bundle",
-    "tmp",
-    ".vagrant"
-  ],
-  "font_face": "Inconsolata-dz",
-  "font_size": 14.0,
-  "highlight_line": true,
-  "highlight_modified_tabs": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "tab_size": 2,
-  "trim_trailing_white_space_on_save": true
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/User/Sunburst (SL).tmTheme",
+    "ensure_newline_at_eof_on_save": true,
+    "file_exclude_patterns": [
+        ".DS_Store",
+        ".tags*",
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.pdf"
+    ],
+    "folder_exclude_patterns": [
+        ".git",
+        ".svn",
+        "CVS",
+        ".bundle",
+        "bundle",
+        "tmp"
+    ],
+    "font_face": "Inconsolata-dz",
+    "font_size": 23,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages": [
+        "Vintage"
+    ],
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
 }
-
