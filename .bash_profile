@@ -4,13 +4,12 @@ alias ll="ls -lah"
 
 # setup git
 git config --global user.name 'Tim Smith'
-git config --global user.email 'tim@cozy.co'
+git config --global user.email 'tsmith84@gmail.com'
 git config --global push.default simple
 
 # chef stuff
 alias kef="knife environment from file"
 alias krf="knife role from file"
-alias ec="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/chef-repo/"
 alias hosts="knife node list | sort"
 export EDITOR=vim
 
@@ -63,23 +62,6 @@ edbagshow () {
 
 dbagshow () {
   knife data bag show $@ -Fj
-}
-
-export COZY_PROJECTS_DIR="$HOME/dev/cozy"
-
-# function to load or unload the service (start/stop)
-redis () {
-  launchctl $@ /usr/local/opt/redis/homebrew.mxcl.redis.plist 
-}
-
-function devmode {
-  printf "Using Gemfile.devel for development mode.\n"
-    export BUNDLE_GEMFILE=Gemfile.devel
-}
-
-function prodmode {
-  printf "Using Gemfile for production mode.\n"
-  unset BUNDLE_GEMFILE
 }
 
 # alias to open finder windows from CLI in an intelligent way
