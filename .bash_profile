@@ -15,11 +15,18 @@ export EDITOR=vim
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
-alias cf="cd ~/dev/cozy; ls -C"
-alias cr="cd ~/dev/chef-repo; ls -C"
-alias crb="cd ~/dev/chef-repo/bin; ls -C"
-alias cb="cd ~/dev/chef-repo/cookbooks; ls -C"
-alias dbag="cd ~/dev/chef-repo/data_bags; ls -C"
+
+# git aliases
+alias ga="git add"
+alias gc="git commit -v"
+alias gca="git commit -av"
+alias gp="git push"
+alias gs="git status"
+
+# bundler
+alias bu="bundle update"
+alias bi="bundle install"
+alias be="bundle exec"
 
 # sometimes you get something that has no installer
 PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib:~/Applications/ec2-api-tools/bin
@@ -44,7 +51,7 @@ csr () {
     }
 
 # aws creds
-. ~/.aws/aws.sh
+# . ~/.aws/aws.sh
 
 # aws command line tools
 export EC2_HOME=~/Applications/ec2-api-tools
@@ -57,7 +64,7 @@ PATH=/opt/chefdk/bin:$PATH
 PATH=~/dev/chef-repo/bin:$PATH
 
 edbagshow () {
-  knife data bag show $@ -Fj --secret-file /Users/tim/.chef/encrypted_data_bag_secret
+  knife data bag show $@ -Fj --secret-file /Users/tsmith/.chef/encrypted_data_bag_secret
 }
 
 dbagshow () {
