@@ -21,7 +21,9 @@ alias ga="git add"
 alias gc="git commit -v"
 alias gca="git commit -av"
 alias gp="git push"
+alias gpl="git pull --rebase"
 alias gs="git status"
+alias uncommitted='for x in *; do cd $x; echo $x; git status; cd ..; done'
 
 # bundler
 alias bu="bundle update"
