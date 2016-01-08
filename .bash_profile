@@ -30,6 +30,9 @@ alias bu="bundle update"
 alias bi="bundle install"
 alias be="bundle exec"
 
+# I'm lazy
+alias v=vi
+
 # sometimes you get something that has no installer
 PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib:~/Applications/ec2-api-tools/bin
 
@@ -88,5 +91,14 @@ function s () {
     /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/dev/
   else
     /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $1
+  fi
+}
+
+# alias for opening atom. if nothing opened assume the dev dir
+function a () {
+  if [ -z $1 ]; then
+    atom ~/dev/
+  else
+    atom $1
   fi
 }
