@@ -102,3 +102,6 @@ function a () {
     atom $1
   fi
 }
+
+# nuke ds_store files before shipping cookbooks
+alias release="find . -name .DS_Store -exec rm -rf {} \;; stove"
