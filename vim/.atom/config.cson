@@ -1,0 +1,23 @@
+"*":
+  "autocomplete-plus": {}
+  "autocomplete-ruby": {}
+  core:
+    disabledPackages: [
+      "linter-foodcritic"
+    ]
+  editor:
+    fontSize: 17
+    invisibles: {}
+  "exception-reporting":
+    userId: "4e20741e-2e62-da0e-92c6-711163afce4d"
+  "linter-foodcritic":
+    executablePath: "/opt/chefdk/bin/foodcritic"
+  "linter-js-yaml": {}
+  "linter-rubocop":
+    command: "/opt/chefdk/bin/rubocop"
+  "one-dark-ui": {}
+  "spell-check": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
