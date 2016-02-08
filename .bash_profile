@@ -56,7 +56,7 @@ csr () {
     }
 
 # aws creds
-# . ~/.aws/aws.sh
+. ~/.aws/aws.sh
 
 # aws command line tools
 export EC2_HOME=~/Applications/ec2-api-tools
@@ -105,3 +105,5 @@ function a () {
 
 # nuke ds_store files before shipping cookbooks
 alias release="find . -name .DS_Store -exec rm -rf {} \;; stove"
+
+eval $(docker-machine env default)
