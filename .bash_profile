@@ -34,7 +34,7 @@ alias be="bundle exec"
 alias v=vi
 
 # sometimes you get something that has no installer
-PATH=$PATH:~/Applications/packer:~/dev/chef-repo/lib:~/Applications/ec2-api-tools/bin
+PATH=$PATH:~/Applications/ec2-api-tools/bin:/opt/delivery-cli/bin
 
 # smaller prompt with more info since hostsnames are crazy long
 PS1="\[\e[00;31m\]MBP\[\e[0m\]\[\e[00;37m\]_\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
