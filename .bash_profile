@@ -37,7 +37,8 @@ alias v=vi
 PATH=$PATH:~/Applications/ec2-api-tools/bin:/opt/delivery-cli/bin
 
 # smaller prompt with more info since hostsnames are crazy long
-PS1="\[\e[00;31m\]MBP\[\e[0m\]\[\e[00;37m\]_\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+export PS1="\[\033[38;5;160m\]MBP\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;51m\]\w\[$(tput sgr0)\$(__git_ps1) "
 
 # easier navigation
 alias ..="cd ..; ls -lh"
@@ -106,4 +107,13 @@ function a () {
 # nuke ds_store files before shipping cookbooks
 alias release="find . -name .DS_Store -exec rm -rf {} \;; stove"
 
+# set my default docker machine
 eval $(docker-machine env default)
+
+# autocomplete is nice
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+#reinstall chefdk nightly
+alias reinstalldk="curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk"
