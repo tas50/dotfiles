@@ -4,7 +4,7 @@ alias ll="ls -lah"
 
 # setup git
 git config --global user.name 'Tim Smith'
-git config --global user.email 'tsmith84@gmail.com'
+git config --global user.email 'tsmith@chef.io'
 git config --global push.default simple
 
 # chef stuff
@@ -15,11 +15,12 @@ export EDITOR=vim
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
+alias d=dev
 
 # git aliases
 alias ga="git add"
-alias gc="git commit -v"
-alias gca="git commit -av"
+alias gc="git commit -v -S"
+alias gca="git add *; git commit -av -S"
 alias gp="git push"
 alias gpl="git pull --rebase"
 alias gs="git status"
@@ -34,7 +35,12 @@ alias be="bundle exec"
 alias v=vi
 
 # sometimes you get something that has no installer
-PATH=$PATH:~/Applications/ec2-api-tools/bin:/opt/delivery-cli/bin
+PATH=/usr/local/opt/gnupg/libexec/gpgbin:$PATH:~/bin
+
+# allow the prompt to not show branch if if not in git repo
+function in_git_repo () {
+  [ -d .git ]
+}
 
 # smaller prompt with more info since hostsnames are crazy long
 source /usr/local/etc/bash_completion.d/git-prompt.sh
@@ -53,8 +59,13 @@ eval "$(rbenv init -)"
 
 # easily generate CSRs
 csr () {
-      openssl req -out $1.csr -new -newkey rsa:2048 -nodes -keyout $1.private.key
-    }
+ openssl req -out $1.csr -new -newkey rsa:2048 -nodes -keyout $1.private.key
+}
+
+# easily generate 3yr self signed cert from csr
+selfsignedcert () {
+  openssl x509 -signkey $1.private.key -in $1.csr -req -days 1095 -out $1.crt
+}
 
 # aws creds
 . ~/.aws/aws.sh
