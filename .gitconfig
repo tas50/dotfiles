@@ -1,6 +1,7 @@
 [user]
 	name = Tim Smith
-	email = tsmith84@gmail.com
+	email = tsmith@chef.io
+	signingkey = 26DD1300
 [core]
 	excludesfile = /Users/tsmith/.gitignore_global
 [difftool "sourcetree"]
@@ -11,3 +12,22 @@
 	trustExitCode = true
 [push]
 	default = simple
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[commit]
+	template = /Users/tsmith/.stCommitMsg
