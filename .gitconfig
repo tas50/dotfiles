@@ -4,6 +4,7 @@
 	signingkey = 26DD1300
 [core]
 	excludesfile = /Users/tsmith/.gitignore_global
+	whitespace = trailing-space,space-before-tab
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -31,3 +32,12 @@
 	untracked = cyan
 [commit]
 	template = /Users/tsmith/.stCommitMsg
+[advice]
+	statusHints = false
+[diff]
+	renames = copies
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

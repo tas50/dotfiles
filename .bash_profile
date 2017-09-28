@@ -6,12 +6,14 @@ alias ll="ls -lah"
 git config --global user.name 'Tim Smith'
 git config --global user.email 'tsmith@chef.io'
 git config --global push.default simple
+eval "$(hub alias -s)"
 
 # chef stuff
 alias kef="knife environment from file"
 alias krf="knife role from file"
 alias hosts="knife node list | sort"
 export EDITOR=vim
+alias vi=vim
 
 # path aliases
 alias dev="cd ~/dev; ls -C"
@@ -19,12 +21,13 @@ alias d=dev
 
 # git aliases
 alias ga="git add"
-alias gc="git commit -v -S"
-alias gca="git add *; git commit -av -S"
+alias gc="git commit -v"
+alias gca="git add *; git commit -av"
 alias gp="git push"
 alias gpl="git pull --rebase"
 alias gs="git status"
 alias uncommitted='for x in *; do cd $x; echo $x; git status; cd ..; done'
+alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # bundler
 alias bu="bundle update"
@@ -77,9 +80,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # setup chef dk in a way that doesn't break the world
 PATH=/opt/chefdk/bin:$PATH
 
-# add the various chef bin tools
-PATH=~/dev/chef-repo/bin:$PATH
-
 edbagshow () {
   knife data bag show $@ -Fj --secret-file /Users/tsmith/.chef/encrypted_data_bag_secret
 }
@@ -116,10 +116,7 @@ function a () {
 }
 
 # nuke ds_store files before shipping cookbooks
-alias release="find . -name .DS_Store -exec rm -rf {} \;; stove"
-
-# set my default docker machine
-eval $(docker-machine env default)
+alias release="find . -name .DS_Store -exec rm -rf {} \;; git push; stove"
 
 # autocomplete is nice
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
