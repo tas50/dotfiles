@@ -1,0 +1,8 @@
+package brew
+package config
+package gem
+package rbenv
+package spark
+package sublime
+package weather
+theme default
