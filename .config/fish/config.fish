@@ -25,11 +25,11 @@ alias gs "git status"
 alias gd "git diff"
 alias a "atom"
 alias cb "cd ~/dev/chef-cookbooks"
-alias vagrant "/usr/local/bin/vagrant"
 alias bu "bundle update"
 alias bi "bundle install"
 alias be "bundle exec"
 alias cl clear
+alias o "open ."
 
 #eval (chef shell-init fish)
 
@@ -45,3 +45,6 @@ set -x EDITOR vim
 alias dokken "env KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen"
 
 set -x TF_VAR_keypair (cat ~/.ssh/id_rsa.pub)
+
+eval (direnv hook fish)
+set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths

@@ -125,3 +125,4 @@ fi
 
 #reinstall chefdk nightly
 alias reinstalldk="curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk"
+alias tree="ls -R | grep \":\" | sed -e 's/://' -e 's/[^-][^\\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"

@@ -45,3 +45,6 @@ build/
 # .ruby-version
 # .ruby-gemset
 Berksfile.lock
+
+# Rubymine
+.idea
