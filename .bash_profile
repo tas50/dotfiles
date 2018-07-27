@@ -70,13 +70,6 @@ selfsignedcert () {
   openssl x509 -signkey $1.private.key -in $1.csr -req -days 1095 -out $1.crt
 }
 
-# aws creds
-. ~/.aws/aws.sh
-
-# aws command line tools
-export EC2_HOME=~/Applications/ec2-api-tools
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # setup chef dk in a way that doesn't break the world
 PATH=/opt/chefdk/bin:$PATH
 
