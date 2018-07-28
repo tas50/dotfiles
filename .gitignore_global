@@ -10,7 +10,7 @@
 # test kitchen
 .kitchen/
 .kitchen.local.yml
-
+kitchen.local.yml
 
 # ruby
 *.gem
