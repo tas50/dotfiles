@@ -33,8 +33,6 @@ alias o "open ."
 
 #eval (chef shell-init fish)
 
-set PATH $PATH /Users/tsmith/Applications
-
 set -x CHANGELOG_GITHUB_TOKEN PUTITHERE
 set -x GITHUB_TOKEN PUTITHERE
 
@@ -45,6 +43,3 @@ set -x EDITOR vim
 alias dokken "env KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen"
 
 set -x TF_VAR_keypair (cat ~/.ssh/id_rsa.pub)
-
-eval (direnv hook fish)
-set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths
