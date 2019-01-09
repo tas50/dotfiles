@@ -119,3 +119,10 @@ fi
 #reinstall chefdk nightly
 alias reinstalldk="curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk"
 alias tree="ls -R | grep \":\" | sed -e 's/://' -e 's/[^-][^\\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+
+# needed for homebrew ruby
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+  
