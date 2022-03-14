@@ -99,15 +99,6 @@ function s () {
   fi
 }
 
-# alias for opening atom. if nothing opened assume the dev dir
-function a () {
-  if [ -z $1 ]; then
-    atom ~/dev/
-  else
-    atom $1
-  fi
-}
-
 # nuke ds_store files before shipping cookbooks
 alias release="find . -name .DS_Store -exec rm -rf {} \;; git push; stove"
 
