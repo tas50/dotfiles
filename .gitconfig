@@ -5,14 +5,16 @@
 [core]
 	excludesfile = /Users/tsmith/.gitignore_global
 	whitespace = trailing-space,space-before-tab
+[push]
+	default = simple
+[commit]
+	template = /Users/tsmith/.stCommitMsg
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[push]
-	default = simple
 [color]
 	branch = auto
 	diff = auto
@@ -37,7 +39,9 @@
 [diff]
 	renames = copies
 [filter "lfs"]
-	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	username = tas50
