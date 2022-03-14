@@ -4,7 +4,7 @@ alias ll="ls -lah"
 
 # setup git
 git config --global user.name 'Tim Smith'
-git config --global user.email 'tsmith@chef.io'
+git config --global user.email 'tim@mondoo.com'
 git config --global push.default simple
 eval "$(hub alias -s)"
 

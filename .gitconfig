@@ -1,6 +1,6 @@
 [user]
 	name = Tim Smith
-	email = tsmith@chef.io
+	email = tsmith@mondoo.com
 	signingkey = 26DD1300
 [core]
 	excludesfile = /Users/tsmith/.gitignore_global
