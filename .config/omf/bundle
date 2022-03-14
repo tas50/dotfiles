@@ -3,6 +3,5 @@ package brew
 package config
 package gem
 package spark
-package sublime
 package weather
 theme default
