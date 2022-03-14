@@ -1,7 +1,5 @@
 package bang-bang
 package brew
-package config
-package gem
-package spark
 package weather
+theme agnoster
 theme default
