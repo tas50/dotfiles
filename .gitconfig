@@ -1,7 +1,7 @@
 [user]
 	name = Tim Smith
-	email = tsmith@mondoo.com
-	signingkey = 26DD1300
+	email = tsmith84@gmail.com
+	signingkey = DE403ED7 
 [core]
 	excludesfile = /Users/tsmith/.gitignore_global
 	whitespace = trailing-space,space-before-tab
@@ -34,6 +34,7 @@
 	untracked = cyan
 [commit]
 	template = /Users/tsmith/.stCommitMsg
+	gpgsign = true
 [advice]
 	statusHints = false
 [diff]
@@ -45,3 +46,7 @@
 	clean = git-lfs clean -- %f
 [credential]
 	username = tas50
+[gpg]
+	program = /opt/homebrew/bin/gpg 
+[init]
+	defaultBranch = main

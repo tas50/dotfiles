@@ -1,5 +1,9 @@
 package bang-bang
+package bass
 package brew
+package config
+package spark
 package weather
 theme agnoster
+theme bobthefish
 theme default
